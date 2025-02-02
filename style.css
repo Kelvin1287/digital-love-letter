@@ -140,7 +140,7 @@ body {
 @media (max-width: 768px) {
     .envelope {
         width: 250px;
-        height: 180px; 
+        height: 180px;
     }
     
     .letter {
@@ -170,7 +170,7 @@ body {
     }
     
     .letter {
-        width: 180px;
+        width: 250px;
         height: auto;
         padding: 12px;
         font-size: 12px;
@@ -179,7 +179,7 @@ body {
     .flap {
         border-left: 90px solid transparent;
         border-right: 90px solid transparent;
-        border-bottom: 70px solid #d8435e;
+        border-top: 70px solid #d8435e;
     }
 
     .hearts-container .heart {
