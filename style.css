@@ -1,3 +1,4 @@
+/* Base styles for large screens (desktop/tablets) */
 body {
     display: flex;
     justify-content: center;
@@ -6,6 +7,7 @@ body {
     background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
     margin: 0;
     overflow: hidden;
+    font-family: 'Arial', sans-serif;
 }
 
 .container {
@@ -25,8 +27,8 @@ body {
 
 .envelope {
     position: relative;
-    width: 480px;
-    height: 330px;
+    width: 320px;
+    height: 220px;
     background: #ff4d6d;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -43,9 +45,9 @@ body {
     left: 0;
     width: 0;
     height: 0;
-    border-left: 240px solid transparent;
-    border-right: 240px solid transparent;
-    border-top: 190px solid #d8435e;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 110px solid #d8435e;
     transform-origin: top;
     transition: transform 0.8s ease-in-out;
     z-index: 3;
@@ -134,3 +136,53 @@ body {
     }
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .envelope {
+        width: 250px;
+        height: 180px;
+    }
+    
+    .letter {
+        width: 220px;
+        height: auto;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .flap {
+        border-left: 120px solid transparent;
+        border-right: 120px solid transparent;
+        border-bottom: 80px solid #d8435e;
+    }
+
+    /* Make hearts smaller and more spaced out */
+    .hearts-container .heart {
+        font-size: 16px;
+    }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+    .envelope {
+        width: 200px;
+        height: 160px;
+    }
+    
+    .letter {
+        width: 180px;
+        height: auto;
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    .flap {
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent;
+        border-bottom: 70px solid #d8435e;
+    }
+
+    .hearts-container .heart {
+        font-size: 12px;
+    }
+}
