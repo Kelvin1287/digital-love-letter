@@ -177,8 +177,8 @@ body {
     }
 
     .flap {
-        border-left: 110px solid transparent;
-        border-right: 110px solid transparent;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
         border-top: 90px solid #d8435e;
     }
 
