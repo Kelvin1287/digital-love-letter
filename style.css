@@ -140,7 +140,7 @@ body {
 @media (max-width: 768px) {
     .envelope {
         width: 250px;
-        height: 180px;
+        height: 180px; 
     }
     
     .letter {
