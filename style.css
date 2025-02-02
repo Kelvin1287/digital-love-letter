@@ -144,7 +144,7 @@ body {
     }
     
     .letter {
-        width: 220px;
+        width: 300px;
         height: auto;
         padding: 15px;
         font-size: 14px;
@@ -153,7 +153,7 @@ body {
     .flap {
         border-left: 120px solid transparent;
         border-right: 120px solid transparent;
-        border-bottom: 80px solid #d8435e;
+        border-top: 80px solid #d8435e;
     }
 
     /* Make hearts smaller and more spaced out */
