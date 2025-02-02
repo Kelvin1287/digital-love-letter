@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.envelope {
+    position: relative;
+    width: 480px;
+    height: 330px;
+    background: #ff4d6d;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 240px solid transparent;
+    border-right: 240px solid transparent;
+    border-top: 190px solid #d8435e;
+    transform-origin: top;
+    transition: transform 0.8s ease-in-out;
+    z-index: 3;
+}
+
+.body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ff4d6d;
+    clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+.letter {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out, box-shadow 1s ease-in-out;
+    z-index: 0;
+}
+
+/* Animation when opened */
+.open .flap {
+    transform: rotateX(180deg);
+}
+
+.open .envelope {
+    transform: translateX(-200px);
+}
+
+.open .letter {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Floating hearts animation */
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.hearts-container .heart {
+    position: absolute;
+    font-size: 20px;
+    animation: floatHearts 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+/* Randomize heart positions and sizes */
+@keyframes randomHeart {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+}
+
