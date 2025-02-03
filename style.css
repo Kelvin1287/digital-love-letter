@@ -188,3 +188,54 @@ body {
         font-size: 12px;
     }
 }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Envelope stays centered */
+.envelope-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* "Open Me" text styles */
+.open-me {
+    font-family: 'Great Vibes', cursive;
+    font-size: 28px;
+    color: #ff4d6d;
+    text-align: center;
+    margin-top: 20px;  /* Space below envelope */
+    animation: bounce 1.5s infinite ease-in-out;
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.8);
+    cursor: pointer;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* When the envelope opens, move "Open Me" down */
+.open .open-me {
+    transform: translateY(80px);
+    opacity: 0;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Glow effect when hovered */
+.open-me:hover {
+    text-shadow: 0 0 20px rgba(255, 77, 109, 1);
+}
+
