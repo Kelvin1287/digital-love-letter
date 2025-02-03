@@ -75,7 +75,7 @@ body {
     transform: scale(0);
     opacity: 0;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out, box-shadow 1s ease-in-out;
-    z-index: 0;
+    z-index: 1;
     font-family: 'Patrick Hand', cursive;
     font-size: 18px;
     background: #fffaf0;
@@ -120,7 +120,7 @@ body {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    z-index: 2;
+    z-index: 0;
 }
 
 .hearts-container .heart {
