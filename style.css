@@ -78,6 +78,8 @@ body {
     opacity: 0;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out, box-shadow 1s ease-in-out;
     z-index: 0;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 18px;
 }
 
 /* Animation when opened */
